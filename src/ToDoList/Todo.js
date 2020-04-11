@@ -1,7 +1,7 @@
 import React from "react";
 
-function Todo(props) {
-  return <div>moje zadanie </div>;
+function Todo(param) {
+  return <div> {param.todo} </div>;
 }
 
 export default Todo;
