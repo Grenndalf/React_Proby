@@ -3,11 +3,13 @@
     font-size: larger;
     max-width: 300px;
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
 .yeah {
     color: lightgreen;
+    background-color: cornflowerblue;
+    margin-left: 20px;
 }
 
 .noYeah {
