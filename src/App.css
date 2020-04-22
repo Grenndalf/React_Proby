@@ -6,6 +6,11 @@
     margin: 10px 10px;
 }
 
+.done {
+    color: lightgray;
+    text-decoration: line-through;
+}
+
 .yeah {
     color: lightgreen;
     background-color: cornflowerblue;

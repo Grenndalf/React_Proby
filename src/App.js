@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import "./App.css";
 
 class ToDoItem extends Component {
-
+  state = {
+    done: false
+  };
+  doneToggle = () =>{
+    this.setState({done: !this.state.done})
+  }
   render() {
-    const { text } = this.props.task
+    const { text } = this.props.task;
     return (
-      <div className='yeah'>
-        <p> { text } </p>
+      <div onClick={this.doneToggle} className={this.state.done?'done':'yeah'}>
+        <p> {text} </p>
       </div>
     );
   }
@@ -23,8 +28,8 @@ class ToDoList extends Component {
   };
   addToDo = () => {
     const list = this.state.tasks;
-    list.push({text: this.state.draft});
-    this.setState({ tasks: list, draft: '' });
+    list.push({ text: this.state.draft });
+    this.setState({ tasks: list, draft: "" });
   };
 
   render() {
@@ -38,7 +43,7 @@ class ToDoList extends Component {
         </div>
         <div className="flexer">
           {this.state.tasks.map((task) => (
-            <ToDoItem task = {task} />
+            <ToDoItem task={task} />
           ))}
           <input
             className="myInput App"
@@ -57,7 +62,7 @@ class ToDoList extends Component {
 }
 
 class App extends Component {
-  myTasks = [ {text: 'orzeł 1'} ,{text:'hmm'} ];
+  myTasks = [{ text: "orzeł 1" }, { text: "hmm" }];
   render() {
     return (
       <div>
