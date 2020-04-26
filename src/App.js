@@ -3,8 +3,8 @@ import "./App.css";
 import ToDoList from "./Containers/ToDoList";
 
 class App extends Component {
-  myTasks = [{ text: "orzeł 1" }, { text: "hmm" }];
-  title = "jak to policzyć?";
+  
+  title = "jak to policzyć? "
   render() {
     return (
       <div className="main-cont">

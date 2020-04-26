@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import NewToDoForm from "./../../Components/NewToDoForm";
 import ToDoItem from "./../../Components/ToDoItem";
-
+const myTasks = [{ text: "orzeł 1" }, { text: "hmm" }];
 class ToDoList extends Component {
   state = {
-    tasks: this.props.tasks,
+    tasks: myTasks,
     draft: "",
   };
 
@@ -23,7 +23,7 @@ class ToDoList extends Component {
 
   render() {
     const { title } = this.props;
-    const { draft } = this.state;
+    const  stats  = this.state;
     return (
       <div>
         <h1> {title} </h1>
@@ -37,9 +37,10 @@ class ToDoList extends Component {
           <NewToDoForm
             onSubmit={this.addToDo}
             onChange={this.updateDraft}
-            draft={draft}
+            draft={stats.draft}
           />
         </div>
+        <p>liczba tasków to: { stats.tasks.length }</p>
       </div>
     );
   }
