@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class ToDoItem extends Component {
   state = {
     done: false,
+    state: 0,
   };
 
   doneToggle = () => {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import ToDoList from "./Containers/ToDoList"
+import ToDoList from "./Containers/ToDoList";
 
 class App extends Component {
   myTasks = [{ text: "orzeł 1" }, { text: "hmm" }];
